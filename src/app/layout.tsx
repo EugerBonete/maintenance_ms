@@ -5,11 +5,14 @@ import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { ThemeProvider } from "~/providers/theme-provider";
+import Navbar from "~/components/navbar";
+import Footer from "~/components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+``;
 
 export const metadata = {
   title: "Create T3 App",
@@ -32,7 +35,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TRPCReactProvider cookies={cookies().toString()}>
+            <Navbar />
             {children}
+            <Footer />
           </TRPCReactProvider>
         </ThemeProvider>
       </body>
