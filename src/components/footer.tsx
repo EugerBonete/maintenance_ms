@@ -10,7 +10,7 @@ import { cn } from "~/lib/utils";
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-background">
-      <Container className="mt-5 min-h-fit">
+      <Container className="mt-5 min-h-fit space-y-5">
         <section
           id="footer-content"
           aria-labelledby="footer-content-heading"
@@ -62,7 +62,7 @@ export default function Footer() {
               rel="noreferrer"
               className="font-semibold transition-colors hover:text-foreground"
             >
-              Sadman
+              azkriven
               <span className="sr-only">Twitter</span>
             </Link>
             .

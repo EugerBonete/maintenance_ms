@@ -1,7 +1,3 @@
-"use client";
-
-import { useScrollTop } from "~/hooks/use-scroll-top";
-import { cn } from "~/lib/utils";
 import Logo from "./logo";
 import { Button } from "./ui/button";
 import Container from "./container";
@@ -11,15 +7,8 @@ import { Badge } from "./ui/badge";
 import { NavigationMenuDemo } from "./nav-items";
 
 export default function Navbar() {
-  const scrolled = useScrollTop();
-
   return (
-    <nav
-      className={cn(
-        "fixed top-0 z-50 w-full bg-background",
-        scrolled && "border-b shadow-sm",
-      )}
-    >
+    <nav className="fixed top-0 z-50 w-full border-b bg-background shadow-sm">
       <Container className="m-0 flex min-h-fit justify-between">
         <div className="flex items-center gap-5">
           <Logo />
