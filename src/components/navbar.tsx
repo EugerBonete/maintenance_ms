@@ -5,6 +5,14 @@ import { TbBellSchool } from "react-icons/tb";
 import { BiSearch } from "react-icons/bi";
 import { Badge } from "./ui/badge";
 import { NavigationMenuDemo } from "./nav-items";
+import {
+  ClerkLoading,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+import { Loader2 } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -31,8 +39,17 @@ export default function Navbar() {
           <Button size="icon" variant="outline">
             <TbBellSchool size={20} />
           </Button>
-
-          <Button>Sign In</Button>
+          <SignedOut>
+            <SignInButton mode="modal">
+              <Button>Sign In</Button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <ClerkLoading>
+            <Loader2 size={20} className="animate-spin" />
+          </ClerkLoading>
         </div>
       </Container>
     </nav>
