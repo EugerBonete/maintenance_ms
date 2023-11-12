@@ -5,7 +5,7 @@ import Hero from "./_components/hero";
 
 export default function Marketing() {
   return (
-    <Container className="mt-32">
+    <Container className="mt-20 md:mt-32">
       <Heading />
       <Hero />
     </Container>
