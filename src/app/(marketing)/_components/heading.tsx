@@ -1,3 +1,5 @@
+import { ClerkLoading } from "@clerk/nextjs";
+import { Loader2 } from "lucide-react";
 import Balancer from "react-wrap-balancer";
 import { Button } from "~/components/ui/button";
 
@@ -17,7 +19,11 @@ export default function Heading() {
         Buy and sell skateboarding gears from independent brands and stores
         around the world with ease
       </Balancer>
+
       <Button size="lg" className="mx-auto block font-bold">
+        <ClerkLoading>
+          <Loader2 size={20} className="animate-spin" />
+        </ClerkLoading>
         Get started free
       </Button>
     </div>

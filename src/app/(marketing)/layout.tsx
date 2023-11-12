@@ -1,3 +1,5 @@
+import { auth } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -5,5 +7,9 @@ type Props = {
 };
 
 export default function MarketingLayout({ children }: Props) {
-  return <main>{children}</main>;
+  const { userId } = auth();
+
+  if (userId) redirect("/dashboard");
+
+  return <>{children}</>;
 }

@@ -113,6 +113,14 @@ export function NavigationMenuDemo() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Lending
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
