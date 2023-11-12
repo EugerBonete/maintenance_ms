@@ -13,6 +13,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import { Loader2 } from "lucide-react";
+import NavUser from "./nav-user";
 
 export default function Navbar() {
   return (
@@ -45,7 +46,7 @@ export default function Navbar() {
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <UserButton />
+            <NavUser />
           </SignedIn>
           <ClerkLoading>
             <Loader2 size={20} className="animate-spin" />
