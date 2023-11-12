@@ -32,11 +32,36 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string(),
-    NEXT_PUBLIC_CLERK_SIGN_IN_URL: z.string(),
-    NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string(),
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z.string(),
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: z.string(),
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_CLERK_SECRET_URL_HERE"),
+        "You forgot to change the default URL",
+      ),
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_CLERK_SECRET_URL_HERE"),
+        "You forgot to change the default URL",
+      ),
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_CLERK_SECRET_URL_HERE"),
+        "You forgot to change the default URL",
+      ),
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_CLERK_SECRET_URL_HERE"),
+        "You forgot to change the default URL",
+      ),
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_CLERK_SECRET_URL_HERE"),
+        "You forgot to change the default URL",
+      ),
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
   },
 
